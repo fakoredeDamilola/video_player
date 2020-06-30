@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: rgb(12, 9, 9);
+}
+.video {
+  background: rgb(41, 41, 41);
+  width: 100%;
+  height: 400px;
+  margin: 120px 0;
+  position: relative;
+  overflow: hidden;
+}
+video {
+  width: 100%;
+  height: 100%;
+}
+.bottom {
+  background: rgb(126, 124, 124);
+  padding: 5px 10px;
+  position: absolute;
+
+  width: 96%;
+  z-index: 100;
+  top: 100%;
+  transition: 0.5s;
+}
+.bottom div {
+  cursor: pointer;
+}
+.showControls {
+  position: absolute;
+
+  width: 96%;
+  z-index: 100;
+  top: 80%;
+  transition: 0.5s;
+}
+.time {
+  display: grid;
+  grid-template-columns: 10% 75% 10%;
+  grid-gap: 10px;
+}
+.sliderTime {
+  background: rgb(8, 10, 8);
+  height: 20px;
+  min-height: 20px;
+  width: 0%;
+}
+.sliderCover {
+  background: #eee;
+}
+.controls {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+.controls div {
+  padding: 15px 0;
+  text-align: center;
+}
+
+.controls div:not(:last-child):hover {
+  background-color: blue;
+}
+.volumeScroller {
+  width: 60%;
+}
+.last {
+  padding: 30px 10px;
+}
+.last ul {
+  list-style: none;
+}
+.last ul li {
+  border-top: 1px rgb(71, 69, 69) solid;
+  color: white;
+  font-size: 18px;
+  padding: 15px 20px;
+  background-color: rgba(66, 66, 66, 0.541);
+}
+
+.last ul li:last-child {
+  border-bottom: 1px rgb(71, 69, 69) solid;
+}
+.last ul li:hover {
+  background-color: grey;
+}
+.active {
+  background: rgb(163, 154, 154) !important;
+}
+@media (min-width: 690px) {
+  .container {
+    width: 690px;
+  }
+  body {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .bottom {
+    width: 98%;
+  }
+}
